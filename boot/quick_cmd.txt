@@ -1,0 +1,5 @@
+
+dd if=mbr.bin of=/home/tangle/work/bochs/bin/hd60M.img bs=512 count=1 conv=notrunc
+
+nasm -I./ -o loader.bin loader.S
+dd if=loader.bin of=/home/tangle/work/bochs/bin/hd60M.img bs=512 count=1 seek=2 conv=notrunc
